@@ -1,5 +1,71 @@
 # Internet and Web Programming VIT Project 
+## Requirements for the project: 
 
+1. login for the following company personnel : 
+- Manager (admin)
+- Sales Person 
+- Warehouser
+- Financier
+
+2. Manager Functionality :
+- Create Order : 
+	1. sales order
+	2. invoice 1
+	3. invoice 2
+	4. sales receipt 
+	
+- View orders: 
+	1. payment status
+	2. order details 
+	3. client details
+
+- Update order: 
+	1. add entry if payment is received
+
+- Products: 
+	1. Create new product
+	2. View available or all products
+	3. update characteristics of products
+	4. maintain inventory
+- Clients:
+	1. create new clients
+	2. view clients
+	3. update characteristics of client
+
+- Analytics:
+	1. inventory analytics
+	2. sales analytics - based on invoice
+	3. payment data - installments of clients
+
+3. Salesperson 
+
+4. Financier
+
+5. Warehouser
+
+6. Order: 
+	1. payment , delivery status
+	2. Sales order
+	3. invoice 
+	4. sales receipt 
+	5. delivery status
+	6. client detials
+	7. payment status
+	
+7. Products: 
+	1. create new products
+	2. inventory crud
+	3. view overall data
+	
+8. Clients : 
+	1. create new clients
+	2. view clients
+	3. update details of clients
+	
+
+	
+	
+3. Customer Relationship Management System
 
 ## References: 
 1. Login
