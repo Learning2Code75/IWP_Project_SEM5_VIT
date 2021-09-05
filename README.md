@@ -65,8 +65,23 @@
 
 	
 	
-3. Customer Relationship Management System
+9. Customer Relationship Management System
+	1. fetch client, user, product data from same database as the above 
+	2. CRM functionality: 
+		1. input website
+		2. input email 
+		3. input telephone
+		4. input shipping address 
+		5. input social media
+		6. input date of contact
+		7. input mode of contact
+		8. description of meeting
+		9. input name of client
+		10. input name of company
+		11. customer interests: show them product catalogue,select cards of products,
+		12. add potential customer as client 
 
+ 
 ## References: 
 1. Login
 https://youtu.be/YocRq-KesCM 
@@ -128,3 +143,4 @@ Machine Learning with React:
 CSS with react: 
 1. https://youtu.be/Nl54MJDR2p8  
 2. https://youtu.be/RhUuMl3R1PE 
+3. https://youtu.be/okbByPWS1Xc
