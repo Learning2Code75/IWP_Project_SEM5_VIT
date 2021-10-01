@@ -36,6 +36,7 @@
 	1. inventory analytics
 	2. sales analytics - based on invoice
 	3. payment data - installments of clients
+	4. leads data 
 
 3. Salesperson 
 
@@ -112,6 +113,7 @@ https://youtube.com/playlist?list=PLwGdqUZWnOp00IbeN0OtL9dmnasipZ9x8
 API : Node, Mongodb
 1. https://youtu.be/-27HAh8c0YU (node tutorial)
 2. https://youtu.be/TNV0_7QRDwY (node tutorial)
+3. https://youtu.be/rltfdjcXjmk( node pjS)
 3. https://youtu.be/jIsj0upCBAM (node pj)
 4. https://youtu.be/BLl32FvcdVM(node) 
 5. https://youtu.be/oSIv-E60NiU (mongo)
@@ -140,7 +142,68 @@ Machine Learning with React:
 5. https://codelabs.developers.google.com/codelabs/tfjs-training-regression/index.html#2 
 6. https://developers.google.com/machine-learning/crash-course/ 
 
+
 CSS with react: 
-1. https://youtu.be/Nl54MJDR2p8  
-2. https://youtu.be/RhUuMl3R1PE 
-3. https://youtu.be/okbByPWS1Xc
+1. styled components: https://youtu.be/Nl54MJDR2p8  : 1hr 6mins done
+2. CSS Grid:  https://youtu.be/RhUuMl3R1PE :
+3. React Router: https://youtu.be/Jppuj6M1sJ4 : done
+4. CSS for Card with grid: https://youtu.be/zfG5IELmGX0 
+5. CSS for Form : https://youtu.be/okbByPWS1Xc
+6. CSS for image grid : https://youtu.be/-qOe8lBAChE
+7. Responsive navbar: https://youtu.be/H4MkGzoACpQ 
+
+
+
+
+
+# Implementation : 
+## 1. Login - in progress
+ - link: https://youtu.be/YocRq-KesCM 
+
+## 2. Multiple User Permissions - in progress
+ - link: https://youtu.be/jI4K7L-LI58 
+
+## 3. MERN crd product - started
+ - link: https://youtu.be/fTCBtz4IcFU 
+
+### what is MongoDB
+1. NoSQL db 
+2. stored documents in collections instead of records in tables as in SQL Databases
+
+### What is NodeJS?
+1. JavaScript engine built for browser , now works without browser, some extra APIs required
+2. allows to run JavaScript outside browser
+### Express JS
+1. framework for NodeJS which helps to ease the process
+
+### React JS
+1. JavaScript Library to build fast , scalable User Interfaces
+2. Display part in MERN 
+
+### Full Stack Application : 
+1. backend     ---- api ---- frontend
+2. node,mongo,express          react
+
+###dependencies
+1. rest API
+2. react
+3. node js
+4. react router
+5. material UI
+
+### routes: 
+1. /products :
+	- router.get('/',productController.getProducts);
+	- router.get('/:id',productController.getProductById);
+	- router.post('/',productController.addProduct);
+	- router.patch('/:id',productController.updateProduct);
+	- router.delete('/:id',productController.deleteProduct);
+
+
+
+
+
+
+
+
+
