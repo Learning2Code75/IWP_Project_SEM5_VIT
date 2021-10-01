@@ -163,7 +163,7 @@ CSS with react:
 ## 2. Multiple User Permissions - in progress
  - link: https://youtu.be/jI4K7L-LI58 
 
-## 3. MERN crd product - started
+## 3. MERN crd product - done api, read frontend
  - link: https://youtu.be/fTCBtz4IcFU 
 
 ### what is MongoDB
