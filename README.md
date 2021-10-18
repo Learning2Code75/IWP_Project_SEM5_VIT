@@ -82,8 +82,44 @@
 		11. customer interests: show them product catalogue,select cards of products,
 		12. add potential customer as client 
 
+
+## References for CRM: 
+1. Apollo server :
+- https://youtube.com/playlist?list=PLpGo-Y3em4SXceWj-OOEFcJmN0MO05vs7 
+2. Apollo server , apollo client fullstack:
+- https://youtube.com/playlist?list=PLASldBPN_pkDUuOzyPotAkKmvwqyDoA0g 
+- https://youtu.be/n1mdAPFq2Os (GMERN)
+3. Apollo client: 
+- https://youtu.be/4smsVPgZDOo 
+- https://youtu.be/DAiXXdGJjvQ 
+
+4. React gql crud: https://youtu.be/ly3m6mv5qvg 
+- Project 6 - tabs
+- Project 7 - slider
+- Project 8 - grocery bud
+- Project 9 - cart
+- Project 10 - cocktails
+
+5. GQL react crud: https://youtu.be/ly3m6mv5qvg 
+- Project 1 - birthday
+- Project 2 - tour
+- Project 3 - reviews
+- Project 4 - q and a
+- Project 5 - menu
+
+10. React JS Frontend only: https://youtu.be/ly3m6mv5qvg 
+- Lorem ipsum
+- Color generator
+- Navbar
+- Sidebar, modal
+- stripe
+11. React cascading drop-down:
+- https://www.cluemediator.com/cascading-dropdown-in-react 
+12. React pdf print:
+- https://youtu.be/497riGWbhsQ 
+- https://youtu.be/B1EoBWAFPp0 
  
-## References: 
+## References for IWP: 
 1. Login
 https://youtu.be/YocRq-KesCM 
 2. Multiple user permissions:
@@ -107,6 +143,8 @@ https://youtube.com/playlist?list=PLwGdqUZWnOp00IbeN0OtL9dmnasipZ9x8
 
 7. Theory
 - https://youtube.com/playlist?list=PLuGe-XRWqbNQur9IEvM3Hb3BslJgs8zbO
+
+
 
 
 ## Learnings from HCI Project : 
