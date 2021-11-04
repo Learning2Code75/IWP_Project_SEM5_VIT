@@ -136,6 +136,7 @@
  
 - https://youtube.com/playlist?list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu (5 vid)
 
+- https://youtu.be/AN3t-OmdyKA (15hr)
 
 5. Node full tutorials:
 https://youtube.com/playlist?list=PLwGdqUZWnOp00IbeN0OtL9dmnasipZ9x8 
@@ -223,13 +224,13 @@ Machine Learning with React:
 - Navbar
 - Sidebar, modal
 - stripe
-11. React cascading drop-down:
+## 11. React cascading drop-down:
 - https://www.cluemediator.com/cascading-dropdown-in-react 
-12. React pdf print:
+## 12. React pdf print:
 - https://youtu.be/497riGWbhsQ 
 - https://youtu.be/B1EoBWAFPp0 
 
-<hr/>
+<hr></hr>
 # References for IWP: 
 
 ## 1. Login - in progress
@@ -274,39 +275,46 @@ Machine Learning with React:
 	- router.patch('/:id',productController.updateProduct);
 	- router.delete('/:id',productController.deleteProduct);
 ## 3. MERN crud post:
-- https://youtu.be/HuXBuXf52vA 
+- https://youtu.be/HuXBuXf52vA (dont)
 
 ## 4. MERN fullstack:. 
-- https://youtube.com/playlist?list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc (43 vid)
+- https://youtube.com/playlist?list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc (43 vid) -- dont
 
-- https://youtube.com/playlist?list=PLB97yPrFwo5hvTwXlJuE4zBKPA2eIw9c0 (18 vid)
+- https://youtube.com/playlist?list=PLB97yPrFwo5hvTwXlJuE4zBKPA2eIw9c0 (18 vid) -- dont
  
-- https://youtube.com/playlist?list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu (5 vid)
+- https://youtube.com/playlist?list=PL6QREj8te1P7VSwhrMf3D3Xt4V6_SRkhu (5 vid) (1 done) -- try3
+
+- https://youtu.be/AN3t-OmdyKA (15hr) -- try4
+
+## 5. print pdf templating
+- https://youtu.be/bt1tOhUYxvM 
 
 
-## 5. Node full tutorials:
-https://youtube.com/playlist?list=PLwGdqUZWnOp00IbeN0OtL9dmnasipZ9x8 
 
 ## 6. Theory
 - https://youtube.com/playlist?list=PLuGe-XRWqbNQur9IEvM3Hb3BslJgs8zbO
 
 
-<hr/>
+## Node full tutorials:
+https://youtube.com/playlist?list=PLwGdqUZWnOp00IbeN0OtL9dmnasipZ9x8 (86 vid) - dont
+
+
+<hr></hr>
 # Learnings from HCI Project : 
 API : Node, Mongodb
 ## 1. https://youtu.be/-27HAh8c0YU (node tutorial)- 9hr
 ## 2. https://youtu.be/TNV0_7QRDwY (node tutorial)- 8hr
 ## 3. https://youtu.be/rltfdjcXjmk( node pjS) - 10hr
-## 4. https://youtu.be/BLl32FvcdVM(node) - 1hr 48min
-## 5. https://youtu.be/oSIv-E60NiU (mongo) - 1hr 13min
-## 6. https://youtube.com/playlist?list=PLaxxQQak6D_dHXuCYHwgyHwhs225vUX6d(mongo) -1hr 20min
+## 4. https://youtu.be/BLl32FvcdVM(node) - 1hr 48min --> try2 -dont
+## 5. https://youtu.be/oSIv-E60NiU (mongo) - 1hr 13min --> try2 - done
+## 6. https://youtube.com/playlist?list=PLaxxQQak6D_dHXuCYHwgyHwhs225vUX6d (mongo) -1hr  20min --> try2 
 
 also refer this: 
 ## 7. https://drive.google.com/folderview?id=1fVHC9taRApzEMbxeme8Z8iqOmTIkOdx9 
 ## 8. https://drive.google.com/folderview?id=1h2S3TN2g1417JiDqNtSOqLBM2r06magO 
 
 
-<hr/>
+<hr></hr>
 # Data Analytics with React : 
 D3 with React - 
 ## 1. https://youtu.be/2LhoCfjm8R4 (11hr 37min)
@@ -325,7 +333,8 @@ Machine Learning with React:
 ## 5. https://codelabs.developers.google.com/codelabs/tfjs-training-regression/index.html#2 
 ## 6. https://developers.google.com/machine-learning/crash-course/
 
-<hr/>
+<hr></hr>
+
 # CSS with react: 
 ## 1. styled components: https://youtu.be/Nl54MJDR2p8  : 1hr 6mins done
 ## 2. CSS Grid:  https://youtu.be/RhUuMl3R1PE :
@@ -335,5 +344,79 @@ Machine Learning with React:
 ## 6. CSS for image grid : https://youtu.be/-qOe8lBAChE
 ## 7. Responsive navbar: https://youtu.be/H4MkGzoACpQ 
 
+
+<hr></hr>
+# try1 :
+- structured the web application -- done
+
+# try2 : 
+- goal : crud client,product,orders details mongo-node : cwh cwh wok (4hr)
+### mongodb commands: 
+1. document database designed for ease of development and scaling
+2. NoSQL db : rows in SQL ==== documents in NoSQL
+3. community + enterprise
+4. mongod is the daemon running , mongo and mongosh is the shell to execute commands
+5. collections , documents, fields(field:value) 
+
+commands : 
+1. show all databases: show dbs
+2. create new db or switch db: use comments 
+3. view current database: db 
+4. drop database: db.dropDatabase()
+5. to show all collections: show collections
+6. create a collection: db.createCollection('comments')
+7. delete collection: db.comments.drop()
+8. insert rows : db.comments.insert({
+		'name':'Neel',
+		'lang':'JavaScript',
+		'member_since':'5'
+})
+9. insert many rows : db.comments.insertMany([
+	{'name':'Neel',
+		'lang':'JavaScript',
+		'member_since':'5'},
+	{'name':'Neel3',
+		'lang':'JavaScript1',
+		'member_since':'51'},
+	{'name':'Neel2',
+		'lang':'JavaScript3',
+		'member_since':'52'}
+])
+10. showing all documents in a collection: db.comments.find().pretty()
+11. search in mongodb database: db.comments.find({lang:'JavaScript'})
+12. limiting in mongodb : db.comments.find().pretty().limit(2)
+13. counting : db.comments.find().count()
+14. sorting increasing =1 , decreasing = -1: db.comments.find().sort({member_since:1})
+15. find one doc : db.comments.findOne()
+16. update doc = find query with update conent in the found doc: db.comments.updateOne({},{})
+17. upsert true in update doc = make new obj in found doc if not made in update doc : db.comments.updateOne({},{},{upsert:true})
+18. update operators: https://docs.mongodb.com/v4.0/reference/operator/update/#id1
+19. increment operator: db.comments.update({name:'Rohan'},{$inc:{member_since:5}})
+20. rename operator renames field name: db.comments.update({},{$rename:{"member_since":"member"} })
+21. delete doc : db.comments.remove({name:"Neel"})
+
+22. less than $lt : db.find({member_since:{$lt:90}})
+- https://docs.mongodb.com/v4.0/reference/operator/aggregation/index.html#comparison-expression-operators 
+
+
+
+	
+# try3 :
+- goal : crud client,product details + manager login mern-jsmastery (10hr)
+
+# try4 : 
+- goal : crud order details + multi-user features + print docs mern-6packprog  (15hr)
+
+# try5 : 
+- goal : analytics 
+
+# try6 :
+- goal : crm 
+
+# try7 :
+- goal : functionality dashboard + css styling in all pages + homepage(call to action)
+
+# try8 :
+- goal : pitcher page(video docs + references properly) , portfolio page , ppt to present, final rev2,3 doc
 
 
