@@ -402,13 +402,13 @@ commands :
 
 	
 # try3 :
-- goal : crud client,product details + manager login mern-jsmastery (10hr)
-
+- goal : crud client  + manager login   mern-jsmastery (10hr)
+- learn about order : 
 # try4 : 
-- goal : crud order details + multi-user features + print docs mern-6packprog  (15hr)
+- goal : crud product + crud order  (details,so,invoice) + multi-user features  print docs mern-6packprog  (15hr)
 
 # try5 : 
-- goal : analytics 
+- goal : analytics(charts.js) , ml(tensorflow.js) 
 
 # try6 :
 - goal : crm 
