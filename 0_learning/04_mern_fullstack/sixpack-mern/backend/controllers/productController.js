@@ -1,4 +1,7 @@
+//own imports
 const Product = require('../models/productModel');
+const ErrorHandler = require('../utils/errorhandler');
+
 
 //create product: -- manager
 exports.createProduct = async(req,res,next)=>{
@@ -17,6 +20,27 @@ exports.getAllProducts = async(req,res)=>{
 		success:true,
 		products
 	});	
+
+}
+
+//get only one product:
+exports.getProductDetails = async(req,res,next)=>{
+	const product = await Product.findById(req.params.id);
+
+	if(!product){
+		// return res.status(500).json({
+		// 	success:false,
+		// 	message:"Product not found"
+		// })
+
+		return next(new ErrorHandler("Product not found",404));
+	}
+
+	// console.log(product)
+	res.status(200).json({
+		success:true,
+		product
+	})
 
 }
 

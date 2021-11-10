@@ -407,6 +407,13 @@ commands :
 # try4 : 
 - goal : crud product + crud order  (details,so,invoice) + multi-user features  print docs mern-6packprog  (15hr)
 
+## mern-6packprog:
+1. routes 
+- get all products:[GET] http://localhost:4000/api/v1/products
+- get only one product: [GET] http://localhost:4000/api/v1/product/:id
+- create new product : [POST] http://localhost:4000/api/v1/products/new 
+- update product :[PUT] http://localhost:4000/api/v1/product/:id
+- delete product :[DELETE] http://localhost:4000/api/v1/productt/:id
 # try5 : 
 - goal : analytics(charts.js) , ml(tensorflow.js) 
 
