@@ -414,6 +414,9 @@ commands :
 - create new product : [POST] http://localhost:4000/api/v1/products/new 
 - update product :[PUT] http://localhost:4000/api/v1/product/:id
 - delete product :[DELETE] http://localhost:4000/api/v1/productt/:id
+- find product using keyword :
+- find product using :
+
 # try5 : 
 - goal : analytics(charts.js) , ml(tensorflow.js) 
 
@@ -425,5 +428,8 @@ commands :
 
 # try8 :
 - goal : pitcher page(video docs + references properly) , portfolio page , ppt to present, final rev2,3 doc
+
+# final features from ui design
+1. 
 
 
