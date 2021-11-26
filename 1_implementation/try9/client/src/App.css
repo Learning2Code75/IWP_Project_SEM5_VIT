@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+/*functionality dashboard*/
+.functionalityDashboard{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media and screen(max-width: 850px){
+  .functionalityDashboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.fDCard{
+  border: 2px solid black;
+  width: max-content;
+  padding: 1.2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  border-radius: .5rem;
+}
+
+.fDCard .actionButton{
+  font-size: 2rem;
+  border: 1px solid black;
+  border-radius: .2rem;
+  padding: 0 2rem;
+  transition: 300ms ease-in;
+  cursor: pointer;
+}
+
+.fDCard .actionButton:hover{
   color: white;
-}
+  background: rgba(0,0,0,0.8);
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -430,7 +430,6 @@ commands :
 # try8 :
 - goal : pitcher page(video docs + references properly) , portfolio page , ppt to present, final rev2,3 doc
 
-# final features from ui design
-1. 
-
-
+# References (docs) 
+1. react router : https://v5.reactrouter.com/core/guides/quick-start 
+2. 
