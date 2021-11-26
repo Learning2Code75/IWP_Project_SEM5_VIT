@@ -7,6 +7,10 @@ const productSchema = mongoose.Schema({
     required: [true, "Please Enter product Name"],
     trim: true,
   },
+  productId:{
+    type:String,
+    required:[true,"Please enter SKU of product"]
+  },
   productDescription: {
     type: String,
     required: [true, "Please Enter product Description"],

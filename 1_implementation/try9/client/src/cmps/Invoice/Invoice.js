@@ -10,6 +10,10 @@ const Invoice = ()=>{
   const [price1,setPrice1] = useState(0);
   const [price2,setPrice2] = useState(0);
 
+  const [stateCodeSame,setStateCodeSame] = useState(true);
+  const [finalAmount, setFinalAmount]=useState(0);
+
+
   const handleName = (e)=>{
     setName(e.target.value)   
   }
@@ -43,12 +47,32 @@ const Invoice = ()=>{
   }
 
   return (
+
     <div className="Invoice">
       <h1>Invoice Generation</h1>
-      <input type="text" placeholder="Name" name="name" onChange={handleName}/>
+     <div className="form">
+       <input type="text" placeholder="Name" name="name" onChange={handleName}/>
       <input type="number" placeholder="Receipt ID" name="receiptId" onChange={handleReceiptId}/>
       <input type="number" placeholder="Price 1" name="price1" onChange={handlePrice1}/>
       <input type="number" placeholder="Price 2" name="price2"  onChange={handlePrice2} />
+
+      
+
+
+
+     </div>
+
+     {/* SGST-CGST(50-50 tax) */}
+      {stateCodeSame && (finalAmount<100000 || finalAmount===100000 ) && <p>  No waybill required </p>}
+      {stateCodeSame && (finalAmount>100000  ) && <p>  gernerate waybill , enter waybill detail </p>}
+
+     {/* IGST(100 tax) */}
+      {!stateCodeSame && ((finalAmount<50000 || finalAmount===50000 )) && <p>  No waybill required</p>}
+      {!stateCodeSame && ((finalAmount>50000  )) && <p>  gernerate waybill , enter waybill detail</p>}
+
+      {/* Calculate tax for each product according to tax percent stored for that product */}
+
+      {/* Bank details */}
 
       <button onClick={createAndDownloadPdf}>
         Download PDF

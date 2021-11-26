@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body{
+  background-color: rgba(231,231,231);
+}
+.form{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap:1rem;
+  padding:1rem;
+  border-radius: 1rem;
+  border:2px solid black;
+  background:white;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+.form input,
+.form select{
+  padding: .4rem;
+  font-size:1.2rem;
+  border:none;
+  border-bottom:2px solid rgba(44, 44, 59, 0.897);
+  cursor:pointer;
+  transition:200ms ease-out;
+}
+.form input:hover,
+.form select:hover{
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+.form button{
+  border:none;
+  padding:.4rem;
+  border-radius: .4rem;
+  background-color: rgba(44, 44, 59, 0.897);
+  color:white;
+  font-size:1.2rem;
+  font-weight: 700;
+  cursor:pointer;
+  transition:200ms ease-out;
+
+}
+.form button:hover{
+  color:rgba(44, 44, 59, 0.897);
+  background-color: rgba(231,231,231);
+}
+.form input:focus{
+  border:none;
+}

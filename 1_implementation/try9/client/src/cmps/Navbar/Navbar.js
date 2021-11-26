@@ -3,10 +3,13 @@ import {
   Link
 } from "react-router-dom";
 
+import './navbar.css';
+
 const Navbar = ()=>{
 	return(
 		<>	
 			<nav>
+        <div className="logo">DLOM</div>
 				 <ul>
             <li>
               <Link to="/">Functionality Dashboard</Link>
@@ -34,7 +37,7 @@ const Navbar = ()=>{
             </li>
 
           </ul>
-          <div>
+          <div className="user">
           	User: Manager
           </div>	
 			</nav>

@@ -1,14 +1,43 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+
+}
 /*functionality dashboard*/
+.fDHead{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
 .functionalityDashboard{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-gap:1rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  width:max-content;
 }
 
-@media and screen(max-width: 850px){
+@media screen and (max-width: 1140px){
   .functionalityDashboard{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }  
+}
+
+@media screen and (max-width: 810px){
+  .functionalityDashboard{
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }  
+  .fDCard{
+    min-width: min-content;
+    min-height: max-content;
+    margin:0 auto;
+  }
 }
 
 .fDCard{
@@ -16,11 +45,20 @@
   width: max-content;
   padding: 1.2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  margin: 1rem;
   border-radius: .5rem;
+  min-width: 300px;
+  min-height: 200px;
+  max-width: 300px;
+  height: max-content;
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, 0.329);
+  transition:300ms ease-out;
+  
+}
+.fDCard:hover{
+  box-shadow: 2px 1px 10px 10px rgba(0, 0, 255, 0.329) ;
 }
 
 .fDCard .actionButton{
@@ -30,11 +68,22 @@
   padding: 0 2rem;
   transition: 300ms ease-in;
   cursor: pointer;
+  color:black;
 }
 
 .fDCard .actionButton:hover{
   color: white;
   background: rgba(0,0,0,0.8);
+}
 
-
+.fDCard p,
+.fDCard h3{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding:.4rem;
+  margin:.4rem;
+  max-width:250px;
+  max-height: max-content;
 }

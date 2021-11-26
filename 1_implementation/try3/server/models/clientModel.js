@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
-
+const reqString = {
+	required:true,
+	type:String
+}
 
 const clientSchema = mongoose.Schema({
 	clientName:reqString,
