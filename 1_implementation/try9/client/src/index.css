@@ -20,12 +20,13 @@ body{
   grid-gap:1rem;
   padding:1rem;
   border-radius: 1rem;
-  border:2px solid black;
+  border:1px solid black;
   background:white;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 .form input,
-.form select{
+.form select,
+.order select{
   padding: .4rem;
   font-size:1.2rem;
   border:none;
@@ -55,4 +56,8 @@ body{
 }
 .form input:focus{
   border:none;
+}
+
+.mainSelector{
+  margin-top:2rem;
 }

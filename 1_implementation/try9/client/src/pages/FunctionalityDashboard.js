@@ -4,6 +4,9 @@ import {BsViewStacked} from 'react-icons/bs';
 import {MdCreate,MdDeleteOutline,MdUpdate} from 'react-icons/md';
 import {DiGoogleAnalytics} from 'react-icons/di';
 import {HiViewGrid} from 'react-icons/hi';
+
+import {Link} from 'react-router-dom';
+
 const FunctionalityDashboard = ()=>{
 	return(
 		<>	
@@ -12,58 +15,73 @@ const FunctionalityDashboard = ()=>{
 			</h1>
 			<div className="functionalityDashboard">
 				<div className="fDCard">
-					<div className="actionButton">
-						<IoCreateOutline />	
-					</div>
+					<Link to="/client">
+						<div className="actionButton">
+							<IoCreateOutline />	
+						</div>
+					</Link>
+					
 					<h3>Create Client</h3>
 					<p>Add a new client to the system</p>
 				</div>
 				<div className="fDCard">
-					<div className="actionButton">
-						<HiViewGrid  />
-					</div>
+					<Link to="/client">
+						<div className="actionButton">
+							<HiViewGrid  />
+						</div>
+					</Link>
 					<h3>View Clients</h3>
 					<p>List of all clients with their details</p>
 				</div>
 				<div className="fDCard">
-					<div className="actionButton">
-					<MdUpdate />
-					<MdDeleteOutline  />
-					</div>
+					<Link to="/client">
+						<div className="actionButton">
+							<MdUpdate />
+							<MdDeleteOutline  />
+						</div>
+					</Link>
 					<h3>Update/Delete Client</h3>
 					<p>Update or Delete Client Information</p>
 				</div>
 				<div className="fDCard">
-				<div className="actionButton">
+				<Link to="/product">
+					<div className="actionButton">
 						<IoCreateOutline />	
 					</div>
+				</Link>						
 					<h3>Create Product</h3>
 					<p>Add a new Product to the system</p>
 				</div>
 				<div className="fDCard">
-				<div className="actionButton">
+				<Link to="/product">
+					<div className="actionButton">
 						<HiViewGrid  />
 					</div>
+				</Link>
 					<h3>View Products</h3>
 					<p>Inventory of Products shown with stock.</p>
 				</div>
 				<div className="fDCard">
+				<Link to="/product">
 					<div className="actionButton">
-					<MdUpdate />
-					<MdDeleteOutline  />
+						<MdUpdate />
+						<MdDeleteOutline  />
 					</div>
+				</Link>
 					<h3>Update/Delete Product</h3>
 					<p>Update or Delete Product Information</p>
 				</div>
 				<div className="fDCard">
+				<Link to="/product">
 					<div className="actionButton">
-					<MdUpdate />
+						<MdUpdate />
 					</div>
+				</Link>
 					<h3>Add Proudcts</h3>
 					<p>Add Products in the system when delivery is received from supplier.</p>
 				</div>
 				<div className="fDCard">
-				<div className="actionButton">
+					<div className="actionButton">
 						<IoCreateOutline />	
 					</div>
 					<h3>Register User</h3>

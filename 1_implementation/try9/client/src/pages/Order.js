@@ -12,7 +12,7 @@ const Order = ()=>{
 	}
 	return(
 		<div className="order">	
-			<select name="order-operation" id="" value={page} onChange={handleChange}>
+			<select name="order-operation" id="" value={page} onChange={handleChange} className="mainSelector">
 				<option value="select">--Select--</option>
 				<option value="create">Create Order</option>
 				<option value="view">View all Orders</option>
