@@ -8,14 +8,25 @@ const cors = require('cors');
 const app = express();
 
 
-const pdfTemplate = require('./documents')
-
+const pdfTemplate = require('./documents');
+const postRoutes =  require('./routes/posts.js');
+const clientRoutes = require('./routes/clients.js');
+const loginRegisterRoutes = require('./routes/loginRegister.js')
 
 const port = process.env.PORT || 5000;
+const CONNECTION_URL = "mongodb://localhost:27017/iwptry9"
+
+
 
 app.use(cors());
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
+app.use(bodyParser.json({limit:"30mb",extended:true}))
+
+
+app.use('/posts',postRoutes);
+app.use('/clients',clientRoutes);
+app.use('/loginRegister',loginRegisterRoutes);
+// app.use('/products',)
 
 let pdfName = "";
 
@@ -37,7 +48,14 @@ app.get("/fetch-pdf",(req,res)=>{
 })
 
 
-
-app.listen(port,()=>{
-	console.log(`Listening on port : ${port}`)
+mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
+.then((result)=>{app.listen(port,()=>{
+		console.log(`Listening on port : ${port}`)
+	})
 })
+.catch((err)=>console.log(err.message));
+
+
+
+
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {IoCreateOutline} from 'react-icons/io5';
 import {BsViewStacked} from 'react-icons/bs';
 import {MdCreate,MdDeleteOutline,MdUpdate} from 'react-icons/md';
@@ -7,7 +7,27 @@ import {HiViewGrid} from 'react-icons/hi';
 
 import {Link} from 'react-router-dom';
 
+
+// own imports : 
+import Posts from '../cmps/Posts/Posts'
+import Form from '../cmps/Form/Form'
+
+
+// global state management
+import {useDispatch} from 'react-redux';
+
+import {getPosts} from '../actions/posts';
+
+
 const FunctionalityDashboard = ()=>{
+
+	const dispatch = useDispatch();
+
+	useEffect(()=>{
+		dispatch(getPosts());
+	},[dispatch])
+
+
 	return(
 		<>	
 			<h1 className="fDHead">
@@ -145,8 +165,12 @@ const FunctionalityDashboard = ()=>{
 					</ul>
 				</div>
 
-
-	
+			
+			
+			</div>
+			<div>
+				<Posts/>
+				<Form/>
 
 			</div>
 		</>

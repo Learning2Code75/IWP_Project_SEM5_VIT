@@ -1,4 +1,4 @@
-body {
+body { 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -48,6 +48,9 @@ body{
   font-weight: 700;
   cursor:pointer;
   transition:200ms ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
 }
 .form button:hover{
@@ -60,4 +63,25 @@ body{
 
 .mainSelector{
   margin-top:2rem;
+}
+
+
+
+@media screen and (max-width: 1200px){
+  .form{
+    grid-template-columns: 2fr;
+    width: 60vw;
+    grid-gap: 1.4rem;
+  }
+
+}
+
+
+@media screen and (max-width: 768px){
+  .form{
+    grid-template-columns: 2fr;
+    width: 90vw;
+    grid-gap: 1.4rem;
+  }
+
 }

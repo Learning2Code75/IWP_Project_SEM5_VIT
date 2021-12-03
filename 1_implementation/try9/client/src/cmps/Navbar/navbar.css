@@ -18,11 +18,15 @@ nav ul {
     justify-content: space-around;
     align-items: center;
 }
+
+
+
+
 nav ul li a{
     text-decoration: none;
     color:white;
     font-size:1.3rem;
-    margin: 0 .4rem;
+    margin: .4rem .4rem;
     padding:.6rem;
     border-radius: .4rem;
     transition: 300ms ease-in-out;
@@ -38,4 +42,16 @@ nav .user{
     display: flex;
     flex-wrap:wrap;
     font-size:1.4rem;
+}
+@media screen and (max-width: 1200px){
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: .4rem 0;
+    }
+
 }

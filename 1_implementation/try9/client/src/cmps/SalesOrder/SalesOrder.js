@@ -3,6 +3,9 @@ import {saveAs} from 'file-saver';
 import {useState} from 'react';
 import './salesorder.css';
 
+import {IoCreateOutline} from 'react-icons/io5';
+import {AiOutlineDownload} from 'react-icons/ai'
+
 const SalesOrder = ()=>{
 
   const [name,setName]= useState("");
@@ -154,11 +157,11 @@ const SalesOrder = ()=>{
 
       <input type="number" placeholder="Price 1" name="price1" onChange={handlePrice1}/>
       <input type="number" placeholder="Price 2" name="price2"  onChange={handlePrice2} />
-
-     </div>
       <button onClick={createAndDownloadPdf}>
-        Download PDF
+        <IoCreateOutline/> Create SO and Download PDF <AiOutlineDownload/>
       </button>
+     </div>
+      
 
     </div>
   );

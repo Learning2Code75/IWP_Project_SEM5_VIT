@@ -16,6 +16,8 @@ const CreateOrder = () =>{
 
             <input type="text" placeholder="Sales person" />
             <input type="text" placeholder ="Order ID" />
+            <button type="submit">Create Order </button>
+
         </div>
         <div>
             <SalesOrder />
@@ -23,11 +25,11 @@ const CreateOrder = () =>{
         <div>
             <Invoice />
         </div>
-        <div>
+        {/*<div>
             {`packed/dispatched/Delivered`}
             {`upload LR copy when packed, dispatched : upload Acknowledgement document when delivered`}
         </div>
-
+*/}
         
 
 
