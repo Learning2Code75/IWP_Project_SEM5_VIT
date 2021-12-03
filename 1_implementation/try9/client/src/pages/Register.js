@@ -15,10 +15,6 @@ const Register = ()=>{
 			role:''
 	})
 
-	const handleSubmit = (e)=>{
-		e.preventDefault();
-		dispatch(createUser(userData))
-	}
 
 	const clear =()=>{
 		setUserData({
@@ -30,6 +26,12 @@ const Register = ()=>{
 			role:''
 		})
 	}
+	const handleSubmit = (e)=>{
+		e.preventDefault();
+		dispatch(createUser(userData))
+		clear();
+	}
+
 	console.log(userData);
 	return(
 		<div className="order">	

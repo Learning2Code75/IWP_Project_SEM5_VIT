@@ -24,10 +24,7 @@ const CreateClient = ()=>{
 		salespersonName:''
 	})
 
-	const handleSubmit = (e)=>{
-		e.preventDefault();
-		dispatch(createClient(clientData))
-	}
+
 	const clear =()=>{
 		setClientData({
 		clientCompanyName:'',
@@ -45,6 +42,11 @@ const CreateClient = ()=>{
 		clientTwitter:'',
 		salespersonName:''
 		})
+	}
+	const handleSubmit = (e)=>{
+		e.preventDefault();
+		dispatch(createClient(clientData))
+		clear();
 	}
 	console.log(clientData);
     return(
