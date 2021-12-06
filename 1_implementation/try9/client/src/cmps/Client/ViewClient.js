@@ -14,7 +14,7 @@ const ViewClient = ()=>{
 	},[dispatch])
 
     return(
-        <div>
+    <div>
         <h1>
 			View All Clients
 		</h1>

@@ -16,7 +16,7 @@ const Order = ()=>{
 				<option value="select">--Select--</option>
 				<option value="create">Create Order</option>
 				<option value="view">View all Orders</option>
-				<option value="updel">Update/Delete Order</option>
+				{/* <option value="updel">Update/Delete Order</option> */}
 			</select>
 			<p>{page}</p>
 

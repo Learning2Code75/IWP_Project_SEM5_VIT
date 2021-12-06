@@ -6,9 +6,10 @@ const router = express.Router();
 
 //own imports  
 
-const {getProducts,createProduct} = require('../controllers/products.js')
+const {getProducts,createProduct,updateProduct} = require('../controllers/products.js')
 
 router.get('/',getProducts);
 router.post('/',createProduct);
+router.patch('/',updateProduct);
 
-module.exports = router;
+module.exports = router;  

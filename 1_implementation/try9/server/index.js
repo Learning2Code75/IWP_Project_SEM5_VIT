@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 const pdf = require("html-pdf");
 const cors = require('cors');
 
-const app = express();
+const app = express(); 
 
 
 const pdfTemplate = require('./documents');
@@ -13,6 +13,7 @@ const postRoutes =  require('./routes/posts.js');
 const clientRoutes = require('./routes/clients.js');
 const loginRegisterRoutes = require('./routes/loginRegister.js');
 const productRoutes = require('./routes/products.js');
+const orderRoutes = require('./routes/orders.js');
  
 const port = process.env.PORT || 5000;
 const CONNECTION_URL = "mongodb://localhost:27017/iwptry9"
@@ -28,12 +29,15 @@ app.use('/posts',postRoutes);
 app.use('/clients',clientRoutes);
 app.use('/loginRegister',loginRegisterRoutes);
 app.use('/products',productRoutes);
+app.use('/orders',orderRoutes);
 
 let pdfName = "";
 
 // [POST]- pdf generation and fetching of the data
 app.post("/create-pdf",(req,res)=>{
-	pdfName = req.body.name;
+	console.log(req.body)
+	pdfName = req.body.dCompanyName;
+
 	pdf.create(pdfTemplate(req.body),{})
 	.toFile(`${pdfName}.pdf`,(err)=>{
 		if(err){

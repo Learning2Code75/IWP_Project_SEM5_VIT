@@ -1,7 +1,7 @@
-const reducer = (user={},action)=>{
+const reducer = (user=[],action)=>{
 	switch(action.type){
-		case 'FETCH_ALL':
-			return action.payload;
+		case 'LOGIN':
+			return [...user,action.payload];
 
 		case 'CREATE':
 			return [...user,action.payload];

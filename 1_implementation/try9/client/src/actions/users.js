@@ -2,15 +2,15 @@ import * as api from '../api/';
 
 // action creators
 
-export const getUser = (userId) => async (dispatch) =>{
+export const loginUser = (userInfo) => async (dispatch) =>{
 	
 	try{
-		const {data} = await api.fetchUser(userId);
+		const {data} = await api.loginUser(userInfo);
 
-		dispatch({type:'FETCH_ALL',payload:data});
+		dispatch({type:'LOGIN',payload:data});
 	}catch(err){
 		console.log(err.message);
-	}
+	} 
 
 
 }

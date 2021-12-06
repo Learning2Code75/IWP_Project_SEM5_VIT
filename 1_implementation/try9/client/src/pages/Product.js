@@ -16,7 +16,7 @@ const Product = ()=>{
 				<option value="select operation">Select an Operation</option>
 				<option value="create">Create Product</option>
 				<option value="read">View all Products</option>
-				<option value="updatedel">Update/Delete Product</option>
+				{/* <option value="updatedel">Update/Delete Product</option> */}
 				<option value="add">Add/Remove Product Stock</option>
 
 

@@ -8,6 +8,9 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 
 
+import {AuthContextProvider} from './Context/AuthContext'
+
+
 
 import App from './App';
 
@@ -15,7 +18,9 @@ const store = createStore(reducers,compose(applyMiddleware(thunk)))
 
 ReactDOM.render(
     <Provider store={store}>
+      <AuthContextProvider>
       <App />
+      </AuthContextProvider>
     </Provider>,
     document.getElementById('root')
 );

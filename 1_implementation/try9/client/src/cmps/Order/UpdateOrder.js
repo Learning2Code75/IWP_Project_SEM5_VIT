@@ -4,7 +4,7 @@ import React from "react"
 const UpdateOrder = ()=>{
     return(
         <div>
-            		<h1>
+            <h1>
 				Update or Delete Order
 			</h1>
 			<div>

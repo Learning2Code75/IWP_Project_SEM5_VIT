@@ -1,11 +1,12 @@
 import axios from 'axios';
 import {saveAs} from 'file-saver';
-import {useState} from 'react';
+import {useState,useContext} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route, 
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 
 import FunctionalityDashboard from './pages/FunctionalityDashboard';
@@ -19,38 +20,42 @@ import Register from './pages/Register';
 
 
 import Invoice from './cmps/Invoice/Invoice';
-import Navbar from './cmps/Navbar/Navbar'
+import Navbar from './cmps/Navbar/Navbar';
+import { AuthContext } from './Context/AuthContext';
+
 import './App.css'
 
 function App() {
+  const {user} = useContext(AuthContext)
 
   return(
     <Router>
          <Navbar />
          <Switch>
          <Route exact path="/">
-            <FunctionalityDashboard />
+            {user?<FunctionalityDashboard />:<Login />}
          </Route>
           <Route path="/login">
-            <Login />
+          {user ? <Redirect to="/" /> : <Login />}
           </Route>
           <Route path="/register">
-            <Register />
+            {user?<Register />:<Login/>}
           </Route>
           <Route exact path="/order">
-            <Order />
+            {user?<Order />:<Login />}
+            
           </Route>
           <Route exact path="/product">
-            <Product />
+          {user?<Product />:<Login />}
           </Route>
           <Route exact path="/client">
-            <Client />
+          {user?<Client />:<Login />}
           </Route>
           <Route exact path="/analytics">
-            <Analytics />
+          {user?<Analytics />:<Login />}
           </Route>
           <Route exact path="/logout">
-            <Logout />
+          {user?<Logout />:<Redirect to="/" />}
           </Route>
         </Switch>
     </Router>

@@ -38,7 +38,7 @@ body{
 .form select:hover{
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
-.form button{
+.form button,button{
   border:none;
   padding:.4rem;
   border-radius: .4rem;
@@ -51,9 +51,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-around;
-
+  margin-bottom: .2rem;
 }
-.form button:hover{
+.form button:hover,
+button:hover{
   color:rgba(44, 44, 59, 0.897);
   background-color: rgba(231,231,231);
 }

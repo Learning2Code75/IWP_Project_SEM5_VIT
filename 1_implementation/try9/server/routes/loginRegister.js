@@ -6,9 +6,9 @@ const router = express.Router();
 
 //own imports  
 
-const {getUser,createUser} = require('../controllers/loginRegister.js')
+const {loginUser,createUser} = require('../controllers/loginRegister.js')
 
-router.get('/:username',getUser);
+router.post('/',loginUser);
 router.post('/',createUser);
 
 module.exports = router;

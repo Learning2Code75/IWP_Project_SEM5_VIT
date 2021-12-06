@@ -1,6 +1,6 @@
 const ProductMessage = require('../models/productMessage.js');
 
-
+ 
 const getProducts =async (req,res)=>{
 	try{
 		const products = await ProductMessage.find();
@@ -31,4 +31,38 @@ const createProduct = async(req,res)=>{
 	}
 }
 
-module.exports = {getProducts,createProduct};
+
+const updateProduct = async(req,res)=>{
+	
+	console.log(req.body);
+
+	const updateProductSKU = req.body.prodSKU;
+	let addQty = req.body.prodQty;
+	// const updateChoice = req.body.updateChoice;
+	
+	// if(updateChoice === 'Remove'){
+	// 	addQty = parseInt('-'+addQty);
+	// }
+
+	// const prod = await ProductMessage.find({productSKU:updateProductSKU});
+	// console.log(prod);
+	// if(await !prod){
+	// 	return res.status(404).send("No product with provided SKU");
+	// }
+
+	// console.log("addQty:",addQty)
+	// console.log("typeof QTY",typeof(addQty))
+
+	// console.log("productStock",prod.productStock);
+	// console.log("productStock type", await typeof(prod.productStock))
+
+	// const newQty = parseInt(addQty) + await parseInt(prod.productStock);
+	// console.log("newQty:",newQty)
+
+	const updatedProduct = await ProductMessage.findOneAndUpdate({productSKU:updateProductSKU},{productStock:addQty},{new:true});
+	console.log(updatedProduct)
+	return res.status(200).json(updatedProduct);
+	
+
+}
+module.exports = {getProducts,createProduct,updateProduct};

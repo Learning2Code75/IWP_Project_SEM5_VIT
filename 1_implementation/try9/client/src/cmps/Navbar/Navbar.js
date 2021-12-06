@@ -1,4 +1,8 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
+
+
+import { AuthContext } from '../../Context/AuthContext';
+
 import { 
   Link
 } from "react-router-dom";
@@ -9,18 +13,23 @@ import './navbar.css';
 
 const Navbar = ()=>{
 
-  const [user,setUser]= useState("loggedIn");
+  // const [user,setUser]= useState("");
+
+  const {user:userFromContext} = useContext(AuthContext);
+  console.log(userFromContext)
+ 
+
 
 	return(
 		<>	
 			<nav>
         <Link to="/" className="logo"><img src={dlom} alt="DLOM" height="60"/></Link>
 				 <ul>
-         { !(user=="loggedIn") && (<li>
+         { !(userFromContext) && (<li>
               <Link to="/login">Login</Link>
             </li>
           ) }
-          { (user=="loggedIn") &&(
+          { (userFromContext) &&(
             <>
                           <li>
               <Link to="/">Functionalities</Link>
@@ -38,9 +47,9 @@ const Navbar = ()=>{
             <li>
               <Link to="/client">Client</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/analytics">Analytics</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/logout">Logout</Link>
             </li>
@@ -50,8 +59,8 @@ const Navbar = ()=>{
 
           </ul>
           
-          {(user=="loggedIn") &&(<div className="user">
-            User: Manager
+          {(userFromContext) &&(<div className="user">
+            User: {`${userFromContext[0].username}(${userFromContext[0].role})`}
           </div>  )}
 			</nav>
 		</>

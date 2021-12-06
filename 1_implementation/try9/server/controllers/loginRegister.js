@@ -1,14 +1,16 @@
 const UserMessage = require('../models/userMessage.js');
 
 
-const getUser =async (req,res)=>{
+const loginUser =async (req,res)=>{
 
 	try{
-		const user = await UserMessage.find({username:req.params.username});
-		console.log(user);
+		console.log(req.body)
+		const usernameToFind = req.body.loginData.username;
+		const user = await UserMessage.find({username:usernameToFind});
+		console.log(user[0]);
 
 		// return res.status(200).json(clients);
-		return res.status(200).send(user);
+		return res.status(200).json(user);
 	}catch(error){
 		// return res.status(404).json({message:error.message});
 		return res.status(404).send({message:error.message});
@@ -32,4 +34,4 @@ const createUser = async(req,res)=>{
 	}
 }
 
-module.exports = {getUser,createUser};
+module.exports = {loginUser,createUser};

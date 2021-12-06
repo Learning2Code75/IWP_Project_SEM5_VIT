@@ -16,7 +16,7 @@ const Client = ()=>{
 			<option value="select">Select Operation</option>
 			<option value="create">Create Client</option>
 			<option value="view">View all Clients</option>
-			<option value="updel">Update/Delete Client</option>
+			{/* <option value="updel">Update/Delete Client</option> */}
 		</select>
 
 		{page=="create" && <CreateClient/>}

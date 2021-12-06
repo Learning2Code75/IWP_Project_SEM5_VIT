@@ -1,9 +1,10 @@
 import axios from 'axios';
 import {saveAs} from 'file-saver';
 import {useState} from 'react';
+import {AiFillCloseCircle} from 'react-icons/ai'
 import './invoice.css';
 
-const Invoice = ()=>{
+const Invoice = ({currId,setInvoiceModal})=>{
 
   const [name,setName]= useState("");
   const [receiptId,setReceiptId] = useState(0);
@@ -37,7 +38,7 @@ const Invoice = ()=>{
         price1,
         price2
       }
-      console.log(billState)
+      console.log(billState) 
 
       await axios.post("/create-pdf" , billState);
       const response = await axios.get("/fetch-pdf", {responseType:'blob'})
@@ -49,8 +50,12 @@ const Invoice = ()=>{
   return (
 
     <div className="Invoice">
-      <h1>Invoice Generation</h1>
      <div className="form">
+     <div style={{display:'flex',justifyContent:'left',marginBottom:'.5rem'}}>
+        <AiFillCloseCircle style={{fontSize:'2rem',color:'red',cursor:'pointer'}} onClick={()=>{setInvoiceModal(false)}} />
+      </div>
+
+     <h2>Create Invoice</h2>
        <input type="text" placeholder="Name" name="name" onChange={handleName}/>
       <input type="number" placeholder="Receipt ID" name="receiptId" onChange={handleReceiptId}/>
       <input type="number" placeholder="Price 1" name="price1" onChange={handlePrice1}/>
@@ -59,7 +64,11 @@ const Invoice = ()=>{
       
 
 
-
+      <button onClick={createAndDownloadPdf}>
+        Download PDF
+      </button>
+      <button style={{backgroundColor:'red'}} onClick={()=>{setInvoiceModal(false)}}>Cancel</button>
+        
      </div>
 
      {/* SGST-CGST(50-50 tax) */}
@@ -74,9 +83,7 @@ const Invoice = ()=>{
 
       {/* Bank details */}
 
-      <button onClick={createAndDownloadPdf}>
-        Download PDF
-      </button>
+
 
     </div>
   );

@@ -1,4 +1,39 @@
-module.exports = ({name,price1,price2,receiptId})=>{
+module.exports = ({
+   dCompanyName,
+   dCompanyAddress,
+   dCompanyGSTIN,
+   dCompanyStateName,
+   dCompanyStateCode,
+   dCompanyContact,
+   dCompanyEmail,
+   dCompanyWebstie,
+   dCompanysoNumber,
+   soDate,
+   mode,
+   other,
+   despatchThrough,
+   destination,
+   terms,
+   salesPerson,
+   soMadeBy,
+   clientCompanyName,
+   clientAddr,
+   clientGST,
+   clientState,
+   clientStateCode,
+   invClientCompany,
+   invClientAddr,
+   invClientGST,
+   invClientStateName,
+   invClientStateCode,
+   supplierRef,
+   poDate,
+   prod1,
+   prod2,
+   price1,
+   price2
+
+})=>{
 	const today = new Date();
 
 	return `
@@ -101,10 +136,100 @@ module.exports = ({name,price1,price2,receiptId})=>{
                       <table>
                          <tr>
                             <td>
-                               Customer name: ${name}
+                               Company Name: ${dCompanyName}
                             </td>
                             <td>
-                               Receipt number: ${receiptId}
+                               Company Address: ${dCompanyAddress}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                               Company GST: ${dCompanyGSTIN}
+                            </td>
+                            <td>
+                               Company State Name: ${dCompanyStateName}
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>
+                               Company State Code: ${dCompanyStateCode}
+                            </td>
+                            <td>
+                               Company Contact: ${dCompanyContact}
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td>
+                               Company Email: ${dCompanyEmail}
+                            </td>
+                            <td>
+                               Company Website: ${dCompanyWebstie}
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td>
+                               Mode/Terms Of Payment: ${mode}
+                            </td>
+                            <td>
+                               Other: ${other}
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td>
+                               Despatch Through: ${despatchThrough}
+                            </td>
+                            <td>
+                               Destination: ${destination}
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td>
+                               Terms: ${terms}
+                            </td>
+                            <td>
+                               Salesperson: ${salesPerson}
+                            </td>
+                            </tr>
+
+                            <tr>
+                            <td>
+                               SO made by: ${soMadeBy}
+                            </td>
+                            <td>
+                               Company Name: ${clientCompanyName}
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>
+                               Address: ${clientAddr}
+                            </td>
+                            <td>
+                               GST: ${clientGST}
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>
+                               State: ${clientState}
+                            </td>
+                            <td>
+                               State Code: ${clientStateCode}
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>
+                               Supplier Ref: ${supplierRef}
+                            </td>
+                            <td>
+                               PO Date: ${poDate}
+                            </td>
+                            </tr>     
+                            <tr>
+                            <td>
+                               SO Number: ${dCompanysoNumber}
                             </td>
                          </tr>
                       </table>
@@ -115,16 +240,16 @@ module.exports = ({name,price1,price2,receiptId})=>{
                    <td>Price</td>
                 </tr>
                 <tr class="item">
-                   <td>First item:</td>
-                   <td>${price1}$</td>
+                   <td>${prod1}</td>
+                   <td>₹${price1}</td>
                 </tr>
                 <tr class="item">
-                   <td>Second item:</td>
-                   <td>${price2}$</td>
+                   <td>${prod2}</td>
+                   <td>₹${price2}</td>
                 </tr>
              </table>
              <br />
-             <h1 class="justify-center">Total price: ${parseInt(price1) + parseInt(price2)}$</h1>
+             <h1 class="justify-center">Total price:₹ ${parseInt(price1) + parseInt(price2)}</h1>
           </div>
        </body>
     </html>

@@ -13,7 +13,7 @@ const CreateClient = ()=>{
 		clientAddress:'',
 		clientGST:'',
 		clientPhoneNumber:'',
-		clientDiscountRate:0,
+		clientDiscountRate:'',
 		modeTermsOfPayment:'',
 		clientEmail:'',
 		clientWebsite:'',
@@ -81,7 +81,7 @@ const CreateClient = ()=>{
 					</select>
 
 					<button type="submit">Create Client </button>
-					<button onClick={clear}>Clear</button>
+					<button onClick={clear}>Clear</button> 
 				</form>
 
 			</div>
