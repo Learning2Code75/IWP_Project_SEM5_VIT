@@ -77,8 +77,9 @@ const SalesOrder = ({currId,setModal})=>{
          <div className="Invoice">
       
      <form autoComplete="off" noValidate className="form" >
-     <div style={{display:'flex',justifyContent:'left',marginBottom:'.5rem'}}>
+     <div style={{display:'flex',justifyContent:'space-between',marginBottom:'.5rem',alignItems:'center'}}>
         <AiFillCloseCircle style={{fontSize:'2rem',color:'red',cursor:'pointer'}} onClick={()=>{setModal(false)}} />
+        <h2>Order ID:{currId}</h2>
       </div>
 
      <h2>Create SalesOrder</h2>
@@ -96,7 +97,11 @@ const SalesOrder = ({currId,setModal})=>{
 
       <input type="text" placeholder="Sales Order Number(VoucherNo)" name="soNumber" value={soData.dCompanysoNumber} onChange={(e)=> setSOData({...soData,dCompanysoNumber:e.target.value})}/>
       {/* so date */}
+      <div>
+      <h3>Sales Order Date</h3>
+
       <input type="date" placeholder= "Sales Order Date" value={soData.soDate} onChange={(e)=> setSOData({...soData,soDate:e.target.value})}/>
+      </div>
       {/* mode/terms of payment */}
       <input type="text" placeholder= "Mode/Terms of Payment"  value={soData.mode} onChange={(e)=> setSOData({...soData,mode:e.target.value})}/>
       {/* Other reference */}
@@ -116,7 +121,11 @@ const SalesOrder = ({currId,setModal})=>{
 
 
       {/* Despatch to */}
-        <input type="text" placeholder="Client Company Name" value={soData.clientCompanyName} onChange={(e)=> setSOData({...soData,clientCompanyName:e.target.value})}/>
+      <div>
+      <h3>Despatch to</h3>
+      <input type="text" placeholder="Client Company Name" value={soData.clientCompanyName} onChange={(e)=> setSOData({...soData,clientCompanyName:e.target.value})}/>
+
+      </div>
         <input type="text" placeholder="Client Address" value={soData.clientAddr} onChange={(e)=> setSOData({...soData,clientAddr:e.target.value})}/>
         <input type="text" placeholder="Client GSTIN/UIN" value={soData.clientGST} onChange={(e)=> setSOData({...soData,clientGST:e.target.value})}/>
         <input type="text" placeholder="Client State Name" value={soData.clientState} onChange={(e)=> setSOData({...soData,clientState:e.target.value})}/>
@@ -124,7 +133,11 @@ const SalesOrder = ({currId,setModal})=>{
 
       
       {/* Invoice to */}
+      <div>
+      <h3>Invoice to</h3>
+     
       <input type="text" placeholder="Client Company Name" value={soData.invClientCompany} onChange={(e)=> setSOData({...soData,invClientCompany:e.target.value})}/>
+      </div>
         <input type="text" placeholder="Client Address" value={soData.invClientAddr} onChange={(e)=> setSOData({...soData,invClientAddr:e.target.value})}/>
         <input type="text" placeholder="Client GSTIN/UIN" value={soData.invClientGST} onChange={(e)=> setSOData({...soData,invClientGST:e.target.value})}/>
         <input type="text" placeholder="Client State Name" value={soData.invClientStateName} onChange={(e)=> setSOData({...soData,invClientStateName:e.target.value})}/>
@@ -133,7 +146,11 @@ const SalesOrder = ({currId,setModal})=>{
 
 
       <input type="text" placeholder="Supplier Ref" name="poRef"  value={soData.supplierRef} onChange={(e)=> setSOData({...soData,supplierRef:e.target.value})}/>
+      <div>
+      <h3>Purchase Order Date</h3>
+     
       <input type="date" placeholder="Purchase Order Date" name="poRef"  value={soData.poDate} onChange={(e)=> setSOData({...soData,poDate:e.target.value})}/>
+     </div>
       {/* <input type="file" name="poFile" placeholder="Upload PO file" value={soData.soNumber} onChange={(e)=> setSOData({...soData,dCompanyName:e.target.value})}/> */}
  
 

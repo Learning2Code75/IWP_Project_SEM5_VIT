@@ -80,12 +80,12 @@ const ViewOrders = ()=>{
 							<h1>Delivery Status</h1>
 
 							<input type="text" placeholder="Enter delivery status" value={deliveryStatus} onChange={(e)=>{setDeliveryStatus(e.target.value)}} /> 
-							<select name="payment-operation" value={paymentStatus} onChange={(e)=>{setPaymentStatus(e.target.value)}}>
+							<select name="payment-operation" value={deliveryStatus} onChange={(e)=>{setDeliveryStatus(e.target.value)}}>
 								<option value="select">Select Delivery Status</option>
-								<option value="Packaging">Quarter Paid</option>
-								<option value="Dispatched">Half Paid</option>
-								<option value="On The way">3 Quarter Paid</option>
-								<option value="Delivered">Paid</option>
+								<option value="Packaging">Packaging</option>
+								<option value="Dispatched">Dispatched</option>
+								<option value="On The way">On the way</option>
+								<option value="Delivered">Delivered</option>
 							</select>	
 							<button type="submit" >
 								Update Delivery
@@ -100,9 +100,10 @@ const ViewOrders = ()=>{
 				{(orderStatusUpdate === "payment") && (
 						
 						<form className="form" onSubmit={handlePaymentSubmit}>
-							<div style={{display:'flex',justifyContent:'left',marginBottom:'.5rem'}}>
+							<div style={{display:'flex',justifyContent:'space-between',marginBottom:'.5rem',alignItems:'center'}}>
 								<AiFillCloseCircle style={{fontSize:'2rem',color:'red',cursor:'pointer'}} onClick={()=>{setOrderStatusUpdate('')}} />
-								{currId}
+								<h2>Order ID:{currId}</h2>
+
 							</div>
 							<h1>Update Payment Status</h1>
 
@@ -131,9 +132,10 @@ const ViewOrders = ()=>{
 				{(orderStatusUpdate === "cancel") && (
 						
 						<form className="form" onSubmit={handleCancelSubmit}>
-							<div style={{display:'flex',justifyContent:'left',marginBottom:'.5rem'}}>
+							<div style={{display:'flex',justifyContent:'space-between',marginBottom:'.5rem',alignItems:'center'}}>
 								<AiFillCloseCircle style={{fontSize:'2rem',color:'red',cursor:'pointer'}} onClick={()=>{setOrderStatusUpdate('')}} />
-								{currId}
+								<h2>Order ID:{currId}</h2>
+
 							</div>
 							<h1>Cancel Order</h1>
 
