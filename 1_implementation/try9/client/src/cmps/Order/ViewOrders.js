@@ -73,8 +73,9 @@ const ViewOrders = ()=>{
 				{(orderStatusUpdate === "delivery") && (
 						
 						<form className="form" onSubmit={handleDeliverySubmit}>
-							<div style={{display:'flex',justifyContent:'left',marginBottom:'.5rem'}}>
+							<div style={{display:'flex',justifyContent:'space-between',marginBottom:'.5rem',alignItems:'center'}}>
 								<AiFillCloseCircle style={{fontSize:'2rem',color:'red',cursor:'pointer'}} onClick={()=>{setOrderStatusUpdate('')}} />
+								<h2>Order ID:{currId}</h2>
 							</div>
 							<h1>Delivery Status</h1>
 
@@ -101,6 +102,7 @@ const ViewOrders = ()=>{
 						<form className="form" onSubmit={handlePaymentSubmit}>
 							<div style={{display:'flex',justifyContent:'left',marginBottom:'.5rem'}}>
 								<AiFillCloseCircle style={{fontSize:'2rem',color:'red',cursor:'pointer'}} onClick={()=>{setOrderStatusUpdate('')}} />
+								{currId}
 							</div>
 							<h1>Update Payment Status</h1>
 
@@ -131,6 +133,7 @@ const ViewOrders = ()=>{
 						<form className="form" onSubmit={handleCancelSubmit}>
 							<div style={{display:'flex',justifyContent:'left',marginBottom:'.5rem'}}>
 								<AiFillCloseCircle style={{fontSize:'2rem',color:'red',cursor:'pointer'}} onClick={()=>{setOrderStatusUpdate('')}} />
+								{currId}
 							</div>
 							<h1>Cancel Order</h1>
 
